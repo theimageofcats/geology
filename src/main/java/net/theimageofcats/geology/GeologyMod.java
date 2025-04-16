@@ -1,6 +1,7 @@
 package net.theimageofcats.geology;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.theimageofcats.geology.block.ModBlocks;
+import net.theimageofcats.geology.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(GeologyMod.MOD_ID)
@@ -25,7 +28,8 @@ public class GeologyMod {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
-
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -37,7 +41,15 @@ public class GeologyMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.FELDSPAR);
+            event.accept(ModItems.FELDSPAR_CLAY);
+            event.accept(ModItems.FELDSPAR_POWDER);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.FELDSPAR_BLOCK);
+            event.accept(ModBlocks.POLISHED_FELDSPAR_BLOCK);
+        }
     }
 
     @SubscribeEvent
