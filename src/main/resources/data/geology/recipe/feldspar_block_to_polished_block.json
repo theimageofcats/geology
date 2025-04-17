@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.3,
+  "group": "feldspar",
+  "ingredient": {
+    "item": "geology:feldspar_block"
+  },
+  "result": {
+    "id": "geology:polished_feldspar_block"
+  }
+}

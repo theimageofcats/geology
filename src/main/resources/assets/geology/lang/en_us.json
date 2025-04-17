@@ -5,6 +5,8 @@
 
   "block.geology.feldspar_block": "Block of Feldspar",
   "block.geology.polished_feldspar_block": "Polished Block of Feldspar",
+  "block.geology.feldspar_ore": "Feldspar Ore",
+  "block.geology.deepslate_feldspar_ore": "Feldspar Deepslate Ore",
 
   "creativetab.geology.geology_tab": "Geology"
 }

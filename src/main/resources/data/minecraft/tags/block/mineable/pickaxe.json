@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "geology:feldspar_block",
+    "geology:polished_feldspar_block",
+    "geology:feldspar_ore",
+    "geology:deepslate_feldspar_ore"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 160,
+  "experience": 0.6,
+  "group": "feldspar",
+  "ingredient": {
+    "item": "geology:deepslate_feldspar_ore"
+  },
+  "result": {
+    "id": "geology:feldspar"
+  }
+}

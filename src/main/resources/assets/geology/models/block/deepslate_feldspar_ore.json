@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "geology:block/deepslate_feldspar_ore"
+  }
+}

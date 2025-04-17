@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FELDSPAR_POWDER.get());
                         output.accept(ModBlocks.FELDSPAR_BLOCK.get());
                         output.accept(ModBlocks.POLISHED_FELDSPAR_BLOCK.get());
+                        output.accept(ModBlocks.FELDSPAR_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_FELDSPAR_ORE.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

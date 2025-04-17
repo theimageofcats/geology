@@ -1,8 +1,10 @@
 package net.theimageofcats.geology.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,14 +22,29 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FELDSPAR_BLOCK =
             registerBlock("feldspar_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-            .strength(2.0f, 4.0f).requiresCorrectToolForDrops()
+                () -> new Block(BlockBehaviour.Properties.of()
+            .strength(2.0f, 4.0f)
+            .requiresCorrectToolForDrops()
             .sound(SoundType.METAL)));
     public static final RegistryObject<Block> POLISHED_FELDSPAR_BLOCK =
             registerBlock("polished_feldspar_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+                () -> new Block(BlockBehaviour.Properties.of()
             .strength(3.0f, 8.0f)
+            .requiresCorrectToolForDrops()
             .sound(SoundType.METAL)));
+    public static final RegistryObject<Block> FELDSPAR_ORE =
+            registerBlock("feldspar_ore",
+                () -> new DropExperienceBlock(UniformInt.of(2, 4)
+                , BlockBehaviour.Properties.of()
+            .strength(2.0f, 7.0f)
+            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_FELDSPAR_ORE =
+            registerBlock("deepslate_feldspar_ore",
+                () -> new DropExperienceBlock(UniformInt.of(3, 6),
+                BlockBehaviour.Properties.of()
+            .strength(3.5f, 7.5f)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.DEEPSLATE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
