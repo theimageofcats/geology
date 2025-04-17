@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.theimageofcats.geology.block.ModBlocks;
+import net.theimageofcats.geology.item.ModCreativeModeTabs;
 import net.theimageofcats.geology.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,8 @@ public class GeologyMod {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -39,17 +42,8 @@ public class GeologyMod {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.FELDSPAR);
-            event.accept(ModItems.FELDSPAR_CLAY);
-            event.accept(ModItems.FELDSPAR_POWDER);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.FELDSPAR_BLOCK);
-            event.accept(ModBlocks.POLISHED_FELDSPAR_BLOCK);
-        }
+
     }
 
     @SubscribeEvent

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 160,
+  "experience": 0.3,
+  "group": "feldspar",
+  "ingredient": {
+    "item": "geology:feldspar"
+  },
+  "result": {
+    "id": "geology:feldspar_clay"
+  }
+}

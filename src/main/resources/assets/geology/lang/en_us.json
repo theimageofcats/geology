@@ -4,5 +4,7 @@
   "item.geology.feldspar_powder": "Feldspar Powder",
 
   "block.geology.feldspar_block": "Block of Feldspar",
-  "block.geology.polished_feldspar_block": "Polished Block of Feldspar"
+  "block.geology.polished_feldspar_block": "Polished Block of Feldspar",
+
+  "creativetab.geology.geology_tab": "Geology"
 }

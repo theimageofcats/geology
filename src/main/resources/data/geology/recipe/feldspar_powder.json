@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "feldspar",
+  "ingredients": [
+    {
+      "item": "geology:feldspar"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "geology:feldspar_powder"
+  }
+}
