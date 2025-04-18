@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.theimageofcats.geology.GeologyMod;
+import net.theimageofcats.geology.item.custom.PolisherItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -21,6 +22,10 @@ public class ModItems {
     public static final RegistryObject<Item> FELDSPAR_POWDER =
             ITEMS.register("feldspar_powder",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> POLISHER =
+            ITEMS.register("polisher",
+                    () -> new PolisherItem(new Item.Properties().durability(48)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

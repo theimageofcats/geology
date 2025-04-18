@@ -28,6 +28,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FELDSPAR_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_FELDSPAR_ORE.get());
                     }).build());
+    public static final RegistryObject<CreativeModeTab> GEOLOGY_UTILITIES =
+            CREATIVE_MODE_TABS.register("geology_utilities_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.POLISHER.get()))
+                    .title(Component.translatable("creativetab.geology.geology_utilities_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.POLISHER.get());
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
